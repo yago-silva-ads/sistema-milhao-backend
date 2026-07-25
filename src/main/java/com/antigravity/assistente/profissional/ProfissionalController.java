@@ -54,7 +54,7 @@ public class ProfissionalController {
             System.err.println("Erro ao enviar e-mail: " + e.getMessage());
         }
 
-        return ResponseEntity.ok(salvo);
+        return ResponseEntity.ok(ProfissionalResponse.fromEntity(salvo));
     }
 
     @PostMapping("/verificar")
@@ -136,7 +136,7 @@ public class ProfissionalController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Profissional>> listarTodos() {
-        return ResponseEntity.ok(repository.findAll());
+    public ResponseEntity<List<ProfissionalResponse>> listarTodos() {
+        return ResponseEntity.ok(ProfissionalResponse.fromList(repository.findAll()));
     }
 }
