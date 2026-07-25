@@ -1,0 +1,15 @@
+# Build
+build/
+.gradle/
+
+# IDE
+.idea/
+*.iml
+
+# Seguranca - NUNCA subir pro Git
+.env
+application-local.properties
+
+# OS
+.DS_Store
+Thumbs.db
